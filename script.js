@@ -8,7 +8,32 @@ const map = new mapboxgl.Map({
     zoom: 11 // starting zoom level
 });
 
+let collisionData;
+fetch('https://raw.githubusercontent.com/ConnorBroughton/GGR472_Lab4-main/refs/heads/main/data/pedyc-collision-18_23.geojson')
+.then(response => response.json()) // Convert the response to JSON
+    .then(data => {
+        collisionData = data; // Store the data in the variable
+        console.log(collisionData); // Log data to confirm it's loaded
 
+        // Add the data to the map once it's loaded
+        map.on('load', () => {
+            map.addSource('collisions', {
+                type: 'geojson',
+                data: collisionData
+            });
+
+            map.addLayer({
+                id: 'collision-points',
+                type: 'circle',
+                source: 'collisions',
+                paint: {
+                    'circle-radius': 5,
+                    'circle-color': '#ff0000'
+                }
+            });
+        });
+    })
+    .catch(error => console.error('Error loading GeoJSON:', error));
 /*--------------------------------------------------------------------
 Step 2: VIEW GEOJSON POINT DATA ON MAP
 --------------------------------------------------------------------*/
