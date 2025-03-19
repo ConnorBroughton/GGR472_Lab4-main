@@ -1,23 +1,35 @@
-# GGR472 Lab 4: Incorporating GIS analysis into web maps using Turf.js
- 
-This repository contains the starter code required to complete Lab 4. The lab is designed to help you learn how to perform spatial analysis and visualize outputs using the [Turf.js](https://turfjs.org/) and [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js/api/) libraries.
+Mapbox Collision Hexgrid Visualization
 
+Overview
 
-## Repository Contents
-- `data/pedcyc_collision_06-21.geojson`: Data file containing point locations of road collisions involving pedestrian and cyclists between 2006 and 2021 in Toronto 
-- `instructions/GGR472_Lab4`: Instructions document explaining steps required to complete the lab
-- `index.html`: HTML file to render the map
-- `style.css`: CSS file for positioning the map interface
-- `script.js`: JavaScript file template to be updated to include code that creates and visualizes and hexgrid map based on the collision data
-   
+This project visualizes pedestrian and cyclist collision data on a Mapbox map. It uses Turf.js to generate a hexgrid overlay, aggregating collision data into hexagons that are color-coded based on collision density.
 
-## Getting started
+Features
 
-To get started with the lab:
+- Displays a Mapbox map centered on Toronto.
 
-1. Clone this repository to your local machine
-2. Update the public access token and basemap in `script.js`
-3. Open `index.html` in a web browser to view the map
-4. Create a new online repository containing your own files
-2. Work through the `instructions/GGR472_Lab4` instructions document to incrementally develop the `script.js` file
+- Loads collision data from a GeoJSON file.
 
+- Aggregates collisions into a hexgrid.
+
+- Filters out hexagons with zero collisions.
+
+- Colors hexagons based on collision density.
+
+- Displays the number of collisions per hexagon.
+
+Technologies Used
+
+- Mapbox GL JS for map rendering.
+
+- Turf.js for spatial analysis.
+
+- JavaScript for handling data and map interactions.
+
+Usage
+
+- The map loads automatically with collision data points.
+
+- The hexgrid is color-coded based on the number of collisions.
+
+- Each hexagon displays the collision count.
