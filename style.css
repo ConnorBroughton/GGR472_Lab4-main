@@ -63,17 +63,17 @@
 }
 
 .legend div:nth-child(2) span {
-    background-color: #ffffcc;
+    background-color: #00ff00;
 }
 
 .legend div:nth-child(3) span {
-    background-color: #ffeda0;
+    background-color: #ffff00;
 }
 
 .legend div:nth-child(4) span {
-    background-color: #feb24c;
+    background-color: #ff9900;
 }
 
 .legend div:nth-child(5) span {
-    background-color: #bd0026;
+    background-color: #ff0000;
 }

@@ -17,12 +17,38 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Utoronto_coa.svg/640px-Utoronto_coa.svg.png"
+                    alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            2024 Bicycle Collisions
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                <!--this portion directs you to another link outside of my webpage-->
+                <a class="nav-item nav-link" href="https://www.cbc.ca/news/canada/toronto/ontario-bike-lanes-internal-documents-1.7481729" target="_blank">
+                    Bike Lane Internal Documents <i class="bi bi-box-arrow-up-right"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
     <div class="container-fluid">
         <div class="row">
             <!-- Left Column: Map -->
             <div class="col-md-8 p-0">
                 <div id='map' class='map'></div>
-                <button type="button" class="btn btn-primary btn-sm" id="bboxbutton">Bounding Box</button>
+                <button type="button" class="btn btn-primary btn-sm mt-5" id="bboxbutton">Bounding Box</button>
+                <div id="legend" class="legend">
+                    <h4>2024 Bicycle Collisions</h4>
+                    <div><span></span>1-9</div>
+                    <div><span></span>10-19</div>
+                    <div><span></span>20-49</div>
+                    <div><span></span>50+</div>
+                </div>
             </div>
   
             <!-- Right Column: Heading and Paragraph -->
